@@ -31,6 +31,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2610844433315578538}
   - {fileID: 8338843220489385474}
   m_Father: {fileID: 6972190693854207450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   informacao: {fileID: 2332098586232832125}
+  activeText: {fileID: 355837672953836530}
   conteudoInfo: "A vida n\xE3o \xE9 um problema a ser resolvido, mas uma realidade
     a ser experimentada."
 --- !u!1 &6482222270699669623
@@ -167,7 +169,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8338843220489385474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -181,7 +183,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 855671033810162735}
-  - {fileID: 2610844433315578538}
   m_Father: {fileID: 7425683115318438225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -270,19 +271,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9155428444494394860}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 287484203933743887}
-        m_TargetAssemblyTypeName: FunctionabiliteOfTheBtn, Assembly-CSharp
-        m_MethodName: ShowText
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &6771939598356360042
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,10 +281,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6972190693854207450}
-  - component: {fileID: 7358486930807741106}
   - component: {fileID: 1911431054653473517}
   - component: {fileID: 5984751453563267236}
   - component: {fileID: 7446703535493304924}
+  - component: {fileID: 2888010878559252690}
   m_Layer: 0
   m_Name: Pulmao
   m_TagString: Organ
@@ -320,14 +309,6 @@ Transform:
   - {fileID: 180910294421328723}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7358486930807741106
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6771939598356360042}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1911431054653473517
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -406,6 +387,16 @@ MonoBehaviour:
   cameraPos: {fileID: 0}
   disableObject: 0
   button: {fileID: 6482222270699669623}
+  text: {fileID: 2332098586232832125}
+  trackedManager: {fileID: 0}
+--- !u!33 &2888010878559252690
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6771939598356360042}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &7346857862920496650
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +561,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8338843220489385474}
+  m_Father: {fileID: 7425683115318438225}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

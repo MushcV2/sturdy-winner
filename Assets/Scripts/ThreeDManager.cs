@@ -10,8 +10,6 @@ public class ThreeDManager : MonoBehaviour
     [SerializeField] GameObject showerButton;
     [SerializeField] TextMeshProUGUI textMeshProUGUI;
 
-  
-
     private void Update()
     {
         CheckNull();
