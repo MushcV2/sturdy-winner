@@ -14,13 +14,13 @@ public class ImageTracking : MonoBehaviour
 
     private void Awake()
     {
-        imageManager = GetComponent<ARTrackedImageManager>();
+        imageManager = FindObjectOfType<ARTrackedImageManager>();
 
         foreach (GameObject _preFab in placeablePreFabs)
         {
             GameObject _newPrefab = Instantiate(_preFab, Vector3.zero, Quaternion.identity);
             _newPrefab.name = _preFab.name;
-            spawnerPreFabs[_newPrefab.name] = _newPrefab;
+            spawnerPreFabs.Add(_newPrefab.name, _newPrefab);
         }
     }
 
@@ -46,33 +46,25 @@ public class ImageTracking : MonoBehaviour
         }
         foreach (ARTrackedImage image in args.removed)
         {
-            if (spawnerPreFabs.ContainsKey(image.referenceImage.name))
-            {
-                spawnerPreFabs[image.referenceImage.name].SetActive(false);
-            }
+            spawnerPreFabs[image.name].SetActive(false);
         }
     }
 
     private void UpdateImage(ARTrackedImage image)
     {
         string name = image.referenceImage.name;
+        //Vector3 _position = image.transform.position;
 
-        if (spawnerPreFabs.ContainsKey(name))
+        GameObject preFab = spawnerPreFabs[name];
+        //preFab.transform.position = _position;
+        preFab.SetActive(true);
+
+        foreach (GameObject go in spawnerPreFabs.Values)
         {
-            GameObject preFab = spawnerPreFabs[name];
-            preFab.SetActive(true);
-
-            foreach (GameObject go in spawnerPreFabs.Values)
+            if (go.name != name)
             {
-                if (go.name != name)
-                {
-                    go.SetActive(false);
-                }
+                go.SetActive(false);
             }
-        }
-        else
-        {
-            Debug.LogWarning($"Prefab with name '{name}' not found in the dictionary.");
         }
     }
 }
