@@ -40,5 +40,15 @@ public class Organ : MonoBehaviour
         //Habilitar o botao caso o player esteja perto da carta
         text.gameObject.SetActive(disableObject);
         organPrefab.SetActive(disableObject);
+
+        /*
+        if (disableObject)
+            trackedManager.trackedImagePrefab = organPrefab;
+        else
+            trackedManager.trackedImagePrefab = null;
+
+        trackedManager.enabled = false;
+        trackedManager.enabled = true;
+        */
     }
 }

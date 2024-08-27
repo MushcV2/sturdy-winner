@@ -27,3 +27,13 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Card_Pulmoes
     m_Texture: {fileID: 2800000, guid: fdde848307fd6524692919e19adfa73f, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 4624755601362481588
+      m_GuidHigh: 7044760062983728774
+    m_SerializedTextureGuid:
+      m_GuidLow: 5788370243678040705
+      m_GuidHigh: 6765726769836009736
+    m_Size: {x: 0.1, y: 0.13529412}
+    m_SpecifySize: 1
+    m_Name: Card_Rins
+    m_Texture: {fileID: 2800000, guid: 8adef2816c11505408296d9ba6b0e45d, type: 3}
