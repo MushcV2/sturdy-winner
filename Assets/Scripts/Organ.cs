@@ -12,6 +12,7 @@ public class Organ : MonoBehaviour
     [SerializeField] Transform cameraPos;//Catar a posicao da camera
     public bool disableObject; //Variavel publica para o script button desativar a porra do modelo 3d
     [SerializeField] GameObject button;
+    [SerializeField] private GameObject organPrefab;
     [SerializeField] private TMP_Text text;
     [SerializeField] private ARTrackedImageManager trackedManager;
 
@@ -38,5 +39,6 @@ public class Organ : MonoBehaviour
         
         //Habilitar o botao caso o player esteja perto da carta
         text.gameObject.SetActive(disableObject);
+        organPrefab.SetActive(disableObject);
     }
 }
