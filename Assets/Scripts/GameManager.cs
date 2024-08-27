@@ -1,21 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject organ;
+    [SerializeField] private Button exitButton;
+    [SerializeField] private Button startButton;
+    [SerializeField] private GameObject panel;
 
-    private void Update()
-    {/*
-        organ = GameObject.FindGameObjectWithTag("Organ");
-        
-        if (organ == null) 
-            Debug.Log("Legal :)");
+    private void Start()
+    {
+        startButton.onClick.AddListener(Join);
+        exitButton.onClick.AddListener(Exit);
 
-        organ.SetActive(Organ.instance.disableObject);
-        *//*else
-        {*//*
-        //} */
+        panel.SetActive(true);
+    }
+
+    private void Join()
+    {
+        panel.SetActive(false);
+    }
+
+    private void Exit()
+    {
+        Application.Quit();
     }
 }

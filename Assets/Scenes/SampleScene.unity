@@ -963,12 +963,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033829670}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b28ea4507a7666e4b97bf0197f0fe5d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  organ: {fileID: 0}
+  exitButton: {fileID: 1476128951}
+  startButton: {fileID: 368096444}
+  panel: {fileID: 1437468810}
 --- !u!4 &1033829672
 Transform:
   m_ObjectHideFlags: 0
